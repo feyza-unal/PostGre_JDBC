@@ -15,7 +15,7 @@ public class ExecuteQuery01 {
     // Record'lari gormek icin executeQuery() methodunu kullanmaliyiz
         ResultSet rs1 = st.executeQuery("select country_name from countries where region_id=1");
 
-        while ((rs1.next())){
+        while ((rs1.next())){   // loop'u pointeri bir sonrakine gecmek icin kullaniyoruz
             System.out.println(rs1.getString(1));
         }
 
@@ -38,6 +38,10 @@ public class ExecuteQuery01 {
         while ((rs3.next())){
             System.out.println(rs3.getInt(1)+"--"+rs3.getString(2)+"--"+rs3.getInt(3));
         }
+
+        //connection'i kapatiyoruz
+        con.close();
+        st.close();
 
     }
 }

@@ -13,8 +13,8 @@ public class Execute01 {
 
         //3. Adım: Statement oluştur
         Statement st = con.createStatement();
-
         System.out.println("Connection Success");
+
         boolean sql1 = st.execute("CREATE TABLE workers(worker_id VARCHAR(20),worker_name VARCHAR(20), worker_salary INT)");
         System.out.println("sql1 = " + sql1); // false return eder cunku data cagirmiyoruz
 
