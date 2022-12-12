@@ -11,7 +11,7 @@ public class ExecuteUpdate01 {
         String sql1 = "UPDATE companies\n" +
                 "SET number_of_employees = 16000\n" +
                 "WHERE number_of_employees < (SELECT AVG(number_of_employees)\n" +
-                "                             FROM companies)";
+                 "FROM companies)";
 
         int updateEdilenSatirSayisi = st.executeUpdate(sql1);
         System.out.println("updateEdilenSatirSayisi = " + updateEdilenSatirSayisi);
